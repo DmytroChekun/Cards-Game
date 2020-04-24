@@ -10,8 +10,8 @@ body{
     margin: 0 auto;
 }
 .card{
-    width: 150px;
-    height: 218px;
+    width: 120px;
+    height: 174.4px;
     position: relative;
     perspective: 1000px;
     margin: 5px;
@@ -134,14 +134,14 @@ p{
 }
 .card__front{
     animation-name: front-start-flip;
-    animation-delay: 0s;
-    animation-duration: 6s;
+    animation-delay: 1s;
+    animation-duration: 6.5s;
 }
 
 .card__back{
     animation-name: back-start-flip;
-    animation-delay: 0s;
-    animation-duration: 6s;
+    animation-delay: 1s;
+    animation-duration: 6.5s;
 }
 
 .flip-front {
@@ -164,14 +164,18 @@ p{
     align-items: center;
     justify-content: center;
 }
+.info-wrap{
+    display: flex;
+    justify-content: space-around;
+
+}
 .task{
-    margin-top: -220px;
-    margin-left: 80px;
+    margin:0 auto;
 }
 .result{
-    margin-top: 10px;
-    margin-left: 80px;
-    font-size: 24px;
+    margin:0 auto;
+    margin-top: 5px;
+    font-size: 16px;
 }
 .card-to-find{
     font-size: 28px;
