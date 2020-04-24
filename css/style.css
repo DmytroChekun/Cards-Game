@@ -155,9 +155,7 @@ p{
 
 .result, .task{
     display: flex;
-    width: 20%;
     height: 80px;
-    min-width: 170px;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
     box-shadow: 2px 2px 5px 0px rgba(87,87,87,1);
@@ -166,15 +164,18 @@ p{
 }
 .info-wrap{
     display: flex;
-    justify-content: space-around;
-
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 590px;
 }
 .task{
     margin:0 auto;
+    width: 200px;
 }
 .result{
+    width: 380px;
     margin:0 auto;
-    margin-top: 5px;
     font-size: 16px;
 }
 .card-to-find{
