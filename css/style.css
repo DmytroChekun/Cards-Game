@@ -1,0 +1,123 @@
+body{
+    font-family: 'Rubik', sans-serif;
+    transition: 1s;
+    width: 100%;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+}
+.card{
+    width: 150px;
+    height: 218px;
+    position: relative;
+    perspective: 1000px;
+    margin: 5px;
+}
+
+
+.card__front, .card__back{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 0px rgba(87,87,87,1);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+}
+.card__front{
+    transform: rotateY(180deg);
+}
+.card__back{
+}
+
+.card-back-img{
+    width: 100%;
+    border-radius: 8px;
+}
+.name-red{
+    color: #ff0000;
+}
+
+.card__name, .card__name-rotated{
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    align-items: center;
+}
+.card__name{
+    left: 0px;
+    top: 0px;
+}
+.card__name-rotated{
+    right: 0px;
+    bottom: 0px;
+    transform: rotate(180deg);
+}
+p{
+    font-size: 34px;
+}
+.name-suit{
+    width: 15px;
+    height: 15px;
+}
+
+.card__suit-main{
+    width: 50px;
+    height: 50px;
+}
+
+.card:hover .card__front {transform: rotateY(360deg);}
+.card:hover .card__back {transform: rotateY(180deg);}
+
+
+@keyframes card-anim{
+    0%{
+        position: relative;
+        margin-top: -208px;
+        transform: rotate3d(0, 1, -2, -5.75turn);
+    }
+    50%{
+        
+        transform: rotate3d(0, 0, -0.25, 225deg) scale3d(1.5, 1.5, 1.5);
+        margin-top: 308px;
+    }
+    100%{
+        position: relative;
+    }
+}
+
+.card2{
+    z-index: 999;
+    animation-name: card-anim;
+    animation-duration: 2s;
+    
+}
+
+@keyframes card-anim2{
+    0%{
+        position: relative;
+        margin-top: 308px;
+        transform: rotate3d(0, 2, 2, -.50turn);
+    }
+    50%{
+        transform: rotate3d(0, 2, 2, -0turn) scale3d(1.2, 1.2, 1.2);
+    }
+    100%{
+        position: relative;
+    }
+}
+
+.card1{
+    animation-name: card-anim2;
+    animation-duration: 2.5s;
+    
+}
