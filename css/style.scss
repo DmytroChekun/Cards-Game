@@ -1,0 +1,212 @@
+body{
+    font-family: 'Rubik', sans-serif;
+    width: 100%;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+}
+.card{
+    width: 120px;
+    height: 174.4px;
+    position: relative;
+    perspective: 1000px;
+    margin: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+.card__front, .card__back{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 0px rgba(87,87,87,1);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+}
+.card__front{
+    transform: rotateY(180deg);
+    
+}
+
+.card-back-img{
+    width: 100%;
+    border-radius: 8px;
+}
+.name-red{
+    color: #ff0000;
+}
+
+.card__name, .card__name-rotated{
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    align-items: center;
+}
+.card__name{
+    left: 5px;
+    top: 0px;
+}
+.card__name-rotated{
+    right: 5px;
+    bottom: 0px;
+    transform: rotate(180deg);
+}
+p{
+    font-size: 34px;
+}
+.name-suit{
+    width: 15px;
+    height: 15px;
+}
+
+.card__suit-main{
+    width: 50px;
+    height: 50px;
+}
+
+/* .card:hover .card__front {transform: rotateY(360deg);}
+.card:hover .card__back {transform: rotateY(180deg);} */
+
+
+
+@keyframes card-anim{
+    0%{
+        position: relative;
+        margin-top: -208px;
+        transform: rotate3d(0, 1, -2, -5.75turn);
+    }
+    50%{
+        
+        transform: rotate3d(0, 0, -0.25, 225deg) scale3d(1.5, 1.5, 1.5);
+        margin-top: 308px;
+    }
+    100%{
+        position: relative;
+    }
+}
+.card2{
+    z-index: 999;
+    animation-name: card-anim;
+    animation-duration: 2s;
+    
+}
+
+@keyframes card-anim2{
+    0%{
+        position: relative;
+        margin-top: 308px;
+        transform: rotate3d(0, 2, 2, -.50turn);
+    }
+    50%{
+        transform: rotate3d(0, 2, 2, -0turn) scale3d(1.2, 1.2, 1.2);
+    }
+    100%{
+        position: relative;
+    }
+}
+.card1{
+    animation-name: card-anim2;
+    animation-duration: 2.5s;
+}
+
+@keyframes front-start-flip{
+    10%, 90%{
+    transform: rotateY(360deg);
+}
+}
+@keyframes back-start-flip{
+    10%, 90%{
+    transform: rotateY(180deg);
+}
+}
+.card__front{
+    animation-name: front-start-flip;
+    animation-delay: 1s;
+    animation-duration: 6s;
+}
+
+.card__back{
+    animation-name: back-start-flip;
+    animation-delay: 1s;
+    animation-duration: 6s;
+}
+
+.flip-front {
+    transform: rotateY(360deg);
+  }
+
+.flip-back {
+    transform: rotateY(180deg);
+}
+
+
+.result, .task, .new-game{
+    display: flex;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 0px rgba(87,87,87,1);
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    text-align: center;
+    margin: 2px;
+}
+.info-wrap{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 590px;
+}
+.task{
+    width: 200px;
+}
+.result{
+    width: 380px;
+    font-size: 16px;
+    transition: 0.5s all ease;
+}
+.result__text{
+    transition: 0.5s all ease;
+}
+
+.invisible{
+    opacity: 0;
+}
+
+.new-game{
+    visibility: hidden;
+    cursor: pointer;
+}
+.new-game:hover{
+    background-color: rgb(59, 240, 59);
+    transition: all 0.1s ease;
+}
+.new-game:active{
+    transform: translateX(2px) translateY(2px);
+    user-select: none;
+    box-shadow: none;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.card-to-find{
+    font-size: 28px;
+    color: rgb(255, 0, 0);
+}
