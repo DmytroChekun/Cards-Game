@@ -114,8 +114,6 @@ p {
   height: 50px;
 }
 
-/* .card:hover .card__front {transform: rotateY(360deg);}
-.card:hover .card__back {transform: rotateY(180deg);} */
 @-webkit-keyframes card-anim {
   0% {
     position: relative;
@@ -132,6 +130,7 @@ p {
     position: relative;
   }
 }
+
 @keyframes card-anim {
   0% {
     position: relative;
