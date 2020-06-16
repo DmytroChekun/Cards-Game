@@ -1,6 +1,8 @@
 body {
   font-family: 'Rubik', sans-serif;
   width: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, from(#077344), color-stop(#047347), color-stop(#02734a), color-stop(#00724d), color-stop(#007250), color-stop(#007150), color-stop(#017050), color-stop(#016f50), color-stop(#016d4d), color-stop(#006b4a), color-stop(#006947), to(#006744));
+  background-image: linear-gradient(to left, #077344, #047347, #02734a, #00724d, #007250, #007150, #017050, #016f50, #016d4d, #006b4a, #006947, #006744);
 }
 
 .wrap {
@@ -23,17 +25,21 @@ body {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   margin: 5px;
-  background-color: #fff;
+  background-color: transparent;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .card:active {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transition: -webkit-transform .1s;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s, -webkit-transform .1s;
 }
 
 .card__front, .card__back {
@@ -61,6 +67,8 @@ body {
 .card__front {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#e9fff6), color-stop(#ecfffb), color-stop(#f0fffe), color-stop(#f5feff), color-stop(#fbfeff), color-stop(#fafdff), color-stop(#f9fcff), color-stop(#f9fbff), color-stop(#f2f9fe), color-stop(#eaf8fc), color-stop(#e3f6f6), to(#dff4ed));
+  background-image: linear-gradient(to right bottom, #e9fff6, #ecfffb, #f0fffe, #f5feff, #fbfeff, #fafdff, #f9fcff, #f9fbff, #f2f9fe, #eaf8fc, #e3f6f6, #dff4ed);
 }
 
 .card-back-img {
@@ -228,8 +236,8 @@ p {
           animation-name: front-start-flip;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 6.5s;
+          animation-duration: 6.5s;
 }
 
 .card__back {
@@ -237,8 +245,9 @@ p {
           animation-name: back-start-flip;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 6.5s;
+          animation-duration: 6.5s;
+  background-color: #70df30;
 }
 
 .flip-front {

@@ -34,7 +34,25 @@ $( document ).ready(function() {
             }
             else if (counter == 4){
                 $('.result').css("background-color", "#3ff576");
-                $('.result').html(`<p style="font-size: 16px;">Congrats! You did it in ${counterCommon+1} moves.</p>`);
+                if ((counterCommon+1) == 4){
+                    $('.result').html(`<p style="font-size: 16px;"><span style="font-size: 20px;">WOW! PERFECT RESULT!</span> <br/> You did it in ${counterCommon+1} moves!</p>`);
+                }
+                else if((counterCommon+1) >= 5 && (counterCommon+1) <= 6){
+                $('.result').html(`<p style="font-size: 16px;"> <span style="font-size: 20px;">Congrats! Almost perfect!</span> <br/> You did it in ${counterCommon+1} moves!</p>`);
+                $('.result').css( 'background-color', '#70df30');
+                }
+                else if((counterCommon+1) >= 7 && (counterCommon+1) <= 8){
+                    $('.result').html(`<p style="font-size: 16px;"> <span style="font-size: 20px;">Not bad!</span> <br/> You did it in ${counterCommon+1} moves.</p>`);
+                    $('.result').css( 'background-color', '#c8ec2a');
+                    }
+                else if((counterCommon+1) >= 9 && (counterCommon+1) < 15){
+                        $('.result').html(`<p style="font-size: 16px;"> <span style="font-size: 20px;">I think you can do better.</span> <br/> You did it in ${counterCommon+1} moves.</p>`);
+                        $('.result').css( 'background-color', '#ec9e2a');
+                    }
+                else if((counterCommon+1) >= 15){
+                    $('.result').html(`<p style="font-size: 16px;"> <span style="font-size: 20px;">I hope you do it on purpose?</span> <br/> You did it in ${counterCommon+1} moves...</p>`);
+                    $('.result').css( 'background-color', '#ec2a2a');
+                }
                 $('.new-game').addClass('visible');
                 counterCommon = counterCommon;
             }
