@@ -20,7 +20,7 @@ $( document ).ready(function() {
             // flipChecker = true;
             if ($(this).find('.name').html() == randomCard) {
                 counter++;
-                $('.result').html('<p class="result__text" style="color: green;"> Your`e goddamn right!</p>');
+                $('.result').html('<p class="result__text" style="color: green;"> You choose the right one!</p>');
             }else{
                 $(this).children('.card__front').removeClass('flip-front');
                 $(this).children('.card__back').removeClass('flip-back');
