@@ -15,15 +15,14 @@ let counterCommon = 0;
 $( document ).ready(function() {
     setTimeout(function(){
         $('.card').on('click', function() {
-            $(this).children('.card__front').addClass('flip-front');
-            $(this).children('.card__back').addClass('flip-back');
             // flipChecker = true;
-            if ($(this).find('.name').html() == randomCard) {
+            if ($(this).find('.name').html() == randomCard && !$(this).children('.card__front').hasClass('flip-front')){
+                $(this).children('.card__front').addClass('flip-front');
+                $(this).children('.card__back').addClass('flip-back');
                 counter++;
                 $('.result').html('<p class="result__text" style="color: green;"> You choose the right one!</p>');
-            }else{
-                $(this).children('.card__front').removeClass('flip-front');
-                $(this).children('.card__back').removeClass('flip-back');
+            }
+            else {
                 $('.result').html('<p style="color: red;"> Wrong!</p>');
             }
             if (counterCommon > -1){
