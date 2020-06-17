@@ -1,7 +1,14 @@
 body{
     font-family: 'Rubik', sans-serif;
     width: 100%;
+    margin: 0 auto;
     background-image: linear-gradient(to left, #077344, #047347, #02734a, #00724d, #007250, #007150, #017050, #016f50, #016d4d, #006b4a, #006947, #006744);
+    display: flex;
+    align-items: center !important;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 7.5%;
 }
 .wrap{
     display: flex;

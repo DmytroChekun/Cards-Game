@@ -1,8 +1,25 @@
 body {
   font-family: 'Rubik', sans-serif;
   width: 100%;
+  margin: 0 auto;
   background-image: -webkit-gradient(linear, right top, left top, from(#077344), color-stop(#047347), color-stop(#02734a), color-stop(#00724d), color-stop(#007250), color-stop(#007150), color-stop(#017050), color-stop(#016f50), color-stop(#016d4d), color-stop(#006b4a), color-stop(#006947), to(#006744));
   background-image: linear-gradient(to left, #077344, #047347, #02734a, #00724d, #007250, #007150, #017050, #016f50, #016d4d, #006b4a, #006947, #006744);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 7.5%;
 }
 
 .wrap {
