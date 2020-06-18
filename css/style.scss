@@ -9,6 +9,7 @@ body{
     flex-direction: column;
     justify-content: center;
     margin-top: 5%;
+    overflow:  hidden;
 }
 .wrap{
     display: flex;
@@ -147,7 +148,6 @@ p{
     animation-name: back-start-flip;
     animation-delay: 1s;
     animation-duration: 6.5s;
-    background-color: #70df30;
 }
 
 .flip-front {
